@@ -1,0 +1,10 @@
+- Display the following calculations
+  - Total number of presents
+  - Amount of presents per day
+  - Total amount of each present
+- Dynamic UI elements
+  - Add or remove presents
+    - Minimun of 1
+	- Maximun of 365
+  - Input per present
+  - Defaults to the standard 12 Days

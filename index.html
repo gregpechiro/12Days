@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Days of Christmas Calculator</title>
+	</head>
+	<body>
+		<div>
+
+		</div>
+		<script>
+			const presents = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+
+			let totalPresents = 0;
+			let presentsPerDay = [];
+			let totalEachPresent = [];
+
+			for (let i = 0; i < presents.length; i++) {
+				const numberOfPresents = i + 1
+				const timesReceived = presents.length - i;
+				const totalPerPresent = timesReceived * numberOfPresents;
+				totalEachPresent.push(totalPerPresent);
+
+				let presentsToday = 0;
+				if (i !== 0) {
+					presentsToday = presentsPerDay[i - 1] + numberOfPresents;
+				} else {
+					presentsToday = 1;
+				}
+				
+				// presentsToday = i !== 0 ? presentsPerDay[i - 1] + numberOfPresents : 1;
+
+				presentsPerDay.push(presentsToday);
+				totalPresents += presentsToday;
+			}
+
+			console.log(`Total Number of Presents: ${totalPresents}`);
+			console.log("Presents Per Day:");
+			console.log(presentsPerDay);
+			console.log("Total Number of Each Present:");
+			console.log(totalEachPresent);
+		</script>
+	</body>
+</html>
